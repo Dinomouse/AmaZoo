@@ -1,0 +1,84 @@
+.search-container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(2, 180px);
+  grid-template-rows: repeat(2, 135px);
+  grid-column-gap: 40px;
+  grid-row-gap: 80px;
+  background-color: #efefef;
+
+  height: 70vh;
+}
+.animal-container {
+  background-color: white;
+  height: 190px;
+  width: 190px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 2px #eeeeee solid;
+  margin-top: -28px;
+}
+
+.animal-title {
+  margin-bottom: -7vw;
+  margin-top: -4vw;
+}
+
+.animal-button {
+  background-color: #039045;
+  width: 33.3%;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0px 0px 0px 5px;
+  font-size: 2vh;
+}
+
+.animal-button-mid {
+  background-color: black;
+  width: 33.3%;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+
+  border-radius: 0px 0px 0px 0px;
+  font-size: 2vh;
+}
+
+.animal-button-end {
+  background-color: #fd8700;
+  width: 33.3%;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  border-radius: 0px 0px 5px 0px;
+  font-size: 2vh;
+}
+
+.elephant {
+  height: 100px;
+  width: 100px;
+}
+
+.kangaroo {
+  height: 100px;
+  width: 100px;
+}
+
+.orangutan {
+  height: 100px;
+  width: 100px;
+}
+
+.leopard {
+  height: 100px;
+  width: 100px;
+}

@@ -1,0 +1,21 @@
+.my-basket-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: orange;
+  text-align: center;
+}
+
+.my-basket-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.my-basket-list-item {
+  background-color: #039045;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  width: 50%;
+}

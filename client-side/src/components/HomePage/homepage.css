@@ -1,0 +1,13 @@
+.home-page-container {
+  background-color: #efefef;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 0;
+}

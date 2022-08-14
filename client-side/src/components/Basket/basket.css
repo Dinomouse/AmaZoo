@@ -1,0 +1,20 @@
+.basket-container {
+  position: relative;
+}
+
+.basket-number {
+  background-color: rgb(255, 3, 3);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.8vh;
+  -webkit-text-stroke-width: 0.11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  width: 35%;
+  border-radius: 100px;
+  border: 3px solid black;
+  color: black;
+}
