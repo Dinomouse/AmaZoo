@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: orange;
+
   text-align: center;
 }
 
@@ -14,8 +14,34 @@
 }
 
 .my-basket-list-item {
-  background-color: #039045;
+  background-color: #94c20a;
   border-radius: 5px;
   margin-bottom: 5px;
-  width: 50%;
+  width: 75%;
+  position: relative;
+}
+
+.basket-order-number {
+  position: absolute;
+  background-color: #ff0303;
+  right: 0;
+  top: 0;
+  width: 10%;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.basket-total {
+  margin-top: 5vh;
+}
+
+.confirm {
+  background-color: #94c20a;
+
+  margin-left: 15px;
+  width: 80px;
+}
+
+.confirm:hover {
+  cursor: pointer;
+  background-color: #94c20ace;
 }

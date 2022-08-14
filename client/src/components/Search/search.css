@@ -31,7 +31,7 @@
 
 .animal-button {
   background-color: #039045;
-  width: 33.3%;
+  width: 33.33%;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
@@ -40,27 +40,40 @@
   font-size: 2vh;
 }
 
+.animal-button:hover {
+  cursor: pointer;
+  background-color: #039045c0;
+}
+
 .animal-button-mid {
   background-color: black;
-  width: 33.3%;
+  width: 33.4%;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
-
   border-radius: 0px 0px 0px 0px;
   font-size: 2vh;
 }
 
+.animal-button-mid:hover {
+  cursor: pointer;
+  background-color: #000000c0;
+}
+
 .animal-button-end {
   background-color: #fd8700;
-  width: 33.3%;
+  width: 33.6%;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
   right: 0;
-
   border-radius: 0px 0px 5px 0px;
   font-size: 2vh;
+}
+
+.animal-button-end:hover {
+  cursor: pointer;
+  background-color: #fd8700c0;
 }
 
 .elephant {

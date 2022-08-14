@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Navbar({ user, isAuthenticated, isLoading }) {
   return (
-    <nav class="nav-bar">
+    <nav className="nav-bar">
       <object
         type={"image/svg+xml"}
         data={logo}

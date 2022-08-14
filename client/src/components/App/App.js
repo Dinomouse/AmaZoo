@@ -14,8 +14,11 @@ function App() {
 
   const [myBasket, setMyBasket] = useState([]);
 
-  function animalClick(animal) {
-    setMyBasket([...myBasket, animal]);
+  function animalClick(animal, price, length) {
+    setMyBasket([
+      ...myBasket,
+      { animal: animal, length: length, price: price },
+    ]);
   }
 
   return (
