@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./myBasket.css";
 
 function MyBasket({ myBasket }) {
@@ -31,7 +32,7 @@ function MyBasket({ myBasket }) {
         {basketCounter == 0
           ? "Your basket is currently empty."
           : basketCounter.map((e, index) => (
-              <div key={Math.random(100000)} className="my-basket-list-item">
+              <div key={Math.random(10000000)} className="my-basket-list-item">
                 <div className="basket-order-item">{e[0]}</div>
                 <div className="basket-order-number">{"x" + e[1]}</div>
               </div>
@@ -42,7 +43,11 @@ function MyBasket({ myBasket }) {
           {"Basket Total: £" +
             totalCounter(basketCounter).toLocaleString("en-US")}
         </h3>
-        <button className="confirm">Confirm Purchase</button>
+        {basketCounter.length > 0 && (
+          <Link to="/Profile">
+            <button className="confirm">Confirm Purchase</button>
+          </Link>
+        )}
       </div>
     </div>
   );
