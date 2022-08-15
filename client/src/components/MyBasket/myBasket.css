@@ -45,3 +45,8 @@
   cursor: pointer;
   background-color: #94c20ace;
 }
+
+.empty-basket {
+  background-color: #ff0303;
+  color: black;
+}

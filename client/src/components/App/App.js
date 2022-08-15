@@ -38,7 +38,7 @@ function App() {
           <Route path="/Profile" element={<ProfilePage user={user} />}></Route>
           <Route
             path="/MyBasket"
-            element={<MyBasket myBasket={myBasket} />}
+            element={<MyBasket myBasket={myBasket} setMyBasket={setMyBasket} />}
           ></Route>
           <Route
             path="/Search"
