@@ -4,7 +4,7 @@ AmaZoo is an application designed to enable people to easily sponsor different e
 
 # Deployment
 
-The app is currently deployed via Netlify.
+The app is currently deployed via Netlify. You can visit here: https://amazooo.netlify.app/
 
 # Screenshots
 
