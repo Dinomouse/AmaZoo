@@ -1,0 +1,26 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-item {
+  background-color: #4996e9;
+  width: 20vw;
+  height: 10vh;
+  border-radius: 5px 5px 5px 5px;
+  margin-bottom: 2vh;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.open {
+  display: block;
+}
+
+.not-open {
+  display: none;
+}

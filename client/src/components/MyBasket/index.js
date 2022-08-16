@@ -2,17 +2,14 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./myBasket.css";
 
-function MyBasket({ myBasket, setMyBasket }) {
-  const [basketCounter, setBasketCounter] = useState([]);
-
-  function totalCounter(array) {
-    let total = 0;
-    for (let i = 0; i < basketCounter.length; i++) {
-      total += Number(array[i][0].split(" ")[3].slice(1)) * Number(array[i][1]);
-    }
-    return total;
-  }
-
+function MyBasket({
+  myBasket,
+  setMyBasket,
+  basketCounter,
+  confirmPurchase,
+  setBasketCounter,
+  totalCounter,
+}) {
   useEffect(() => {
     let counter = {};
 
@@ -28,7 +25,6 @@ function MyBasket({ myBasket, setMyBasket }) {
     setMyBasket([]);
   }
 
-  console.log(basketCounter);
   return (
     <div className="my-basket-container">
       <h3 className="my-basket-title">Your Basket:</h3>
@@ -55,7 +51,9 @@ function MyBasket({ myBasket, setMyBasket }) {
         {basketCounter.length > 0 && (
           <>
             <Link to="/Profile">
-              <button className="confirm">Confirm Purchase</button>
+              <button className="confirm" onClick={confirmPurchase}>
+                Confirm Purchase
+              </button>
             </Link>
             <button className="empty-basket" onClick={clearBasket}>
               Clear Basket
