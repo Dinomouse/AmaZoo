@@ -17,6 +17,12 @@
   flex-direction: column;
 }
 
+.order-item:hover {
+  transform: scale(110%);
+  transition: 3s;
+  cursor: pointer;
+}
+
 .open {
   display: block;
 }

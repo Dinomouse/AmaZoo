@@ -25,8 +25,8 @@
 }
 
 .animal-title {
-  margin-bottom: -7vw;
-  margin-top: -4vw;
+  margin-bottom: -5vw;
+  margin-top: -3vw;
 }
 
 .animal-button {
@@ -77,21 +77,25 @@
 }
 
 .elephant {
+  margin-top: 25px;
   height: 100px;
   width: 100px;
 }
 
 .kangaroo {
+  margin-top: 25px;
   height: 100px;
   width: 100px;
 }
 
 .orangutan {
+  margin-top: 25px;
   height: 100px;
   width: 100px;
 }
 
 .leopard {
+  margin-top: 25px;
   height: 100px;
   width: 100px;
 }

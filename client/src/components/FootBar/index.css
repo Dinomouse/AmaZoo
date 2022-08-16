@@ -5,7 +5,7 @@
 
 .foot-bar {
   /* background-color: var(--primary-color); */
-  background-color: rgb(3, 144, 69);
+  background-color: #039045;
 
   height: 15vh;
   display: flex;
@@ -32,6 +32,10 @@
   justify-content: center;
   border-radius: 8%;
   color: black;
+}
+
+.search:hover {
+  background-color: #4996e9;
 }
 
 .nav-buttons-container {
