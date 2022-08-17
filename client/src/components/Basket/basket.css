@@ -1,5 +1,7 @@
 .basket-container {
   position: relative;
+  height: 44px;
+  width: 44px;
 }
 
 .basket-number {
@@ -12,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35%;
-  width: 35%;
+  height: 18px;
+  width: 18px;
   border-radius: 100px;
   border: 3px solid black;
   color: black;

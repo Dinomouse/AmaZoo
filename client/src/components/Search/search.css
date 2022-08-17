@@ -4,7 +4,7 @@
   align-content: center;
   grid-template-columns: repeat(2, 180px);
   grid-template-rows: repeat(2, 135px);
-  grid-column-gap: 40px;
+  grid-column-gap: 1vw;
   grid-row-gap: 80px;
   background-color: #efefef;
 
@@ -12,8 +12,8 @@
 }
 .animal-container {
   background-color: white;
-  height: 190px;
-  width: 190px;
+  height: 30vh;
+  width: 45vw;
   border-radius: 5px;
   display: flex;
   justify-content: space-evenly;
@@ -25,18 +25,18 @@
 }
 
 .animal-title {
-  margin-bottom: -5vw;
-  margin-top: -3vw;
+  margin-bottom: -12vw;
+  margin-top: -7vw;
 }
 
 .animal-button {
   background-color: #039045;
-  width: 33.33%;
-  margin-bottom: 0;
+  width: 33.333%;
+  margin-left: 0;
   position: absolute;
   bottom: 0;
   left: 0;
-  border-radius: 0px 0px 0px 5px;
+  border-radius: 0px 0px 0px 2px;
   font-size: 2vh;
 }
 
@@ -47,12 +47,13 @@
 
 .animal-button-mid {
   background-color: black;
-  width: 33.4%;
+  width: 33.334%;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
   border-radius: 0px 0px 0px 0px;
   font-size: 2vh;
+  margin-left: 0;
 }
 
 .animal-button-mid:hover {
@@ -62,12 +63,13 @@
 
 .animal-button-end {
   background-color: #fd8700;
-  width: 33.6%;
+  width: 33.333%;
   margin-bottom: 0;
+  margin-left: 0;
   position: absolute;
   bottom: 0;
   right: 0;
-  border-radius: 0px 0px 5px 0px;
+  border-radius: 0px 0px 2px 0px;
   font-size: 2vh;
 }
 

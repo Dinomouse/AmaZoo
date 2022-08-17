@@ -14,15 +14,15 @@
 }
 
 .logo {
-  height: 70px;
-  width: 70px;
+  height: 65px;
+  width: 65px;
   margin-left: 3vw;
   display: flex;
   align-items: center;
 }
 
 .title {
-  font-size: 10vh;
+  font-size: 15vw;
   display: flex;
   align-items: center;
   color: #efefef;
