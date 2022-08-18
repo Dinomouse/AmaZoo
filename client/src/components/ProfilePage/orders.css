@@ -6,11 +6,12 @@
 
 .order-item {
   background-color: #4996e9;
-  width: 20vw;
+  width: 60vw;
   height: 10vh;
   border-radius: 5px 5px 5px 5px;
-  margin-bottom: 2vh;
-  font-size: 1vw;
+  margin-bottom: -4vw;
+  margin-top: 5vw;
+  font-size: 4.7vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,13 +19,15 @@
 }
 
 .order-item:hover {
-  transform: scale(110%);
-  transition: 3s;
+  /* transform: scale(110%);
+  transition: 3s; */
   cursor: pointer;
 }
 
 .open {
   display: block;
+  margin-top: 0;
+  background-color: #94c20a;
 }
 
 .not-open {

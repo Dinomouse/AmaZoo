@@ -34,7 +34,10 @@ function ProfilePage({
                 collapsibleToggle(e);
               }}
             >
-              {e.date + ` Order: ${e.id} Total:£${totalCounter(e.order)}  `}
+              {e.date +
+                ` Order: ${e.id} Total:£${totalCounter(e.order).toLocaleString(
+                  "en-US"
+                )}  `}
             </div>
             <div className={e.open ? "open" : "not-open"}>
               <p>
