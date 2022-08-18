@@ -12,7 +12,8 @@
     "createAmazooTable": "node -r dotenv/config ./db/scripts/createAmazooTable.js",
     "populateAmazooTable": "node -r dotenv/config ./db/scripts/populateAmazooTable.js",
     "deleteAmazooTable": "node -r dotenv/config ./db/scripts/deleteAmazooTable.js",
-    "reset": "npm run deleteAmazooTable && npm run createAmazooTable && npm run populateAmazooTable"
+    "reset": "npm run deleteAmazooTable && npm run createAmazooTable && npm run populateAmazooTable",
+    "fresh": "npm run deleteAmazooTable && npm run createAmazooTable"
   },
   "keywords": [],
   "author": "",
