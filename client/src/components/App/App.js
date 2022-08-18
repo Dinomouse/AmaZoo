@@ -39,7 +39,7 @@ function App() {
     for (let i = 0; i < basketCounter.length; i++) {
       await axios({
         method: "post",
-        url: `http://localhost:3001/orders`,
+        url: `https://amazooo.herokuapp.com/orders`,
         data: {
           order_id: randomOrderNumber,
           user_id: `${user.sub.split("|")[1]}`,
