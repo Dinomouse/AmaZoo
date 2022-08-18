@@ -1,4 +1,6 @@
 import "./orders.css";
+import axios from "axios";
+import { useEffect } from "react";
 
 function ProfilePage({
   user,
@@ -6,16 +8,31 @@ function ProfilePage({
   totalCounter,
   collapsibleToggle,
   isLoading,
+  setOrders,
 }) {
-  function counter(array) {
-    let total = 0;
-    for (let i = 0; i < array.length; i++) {
-      total += Number(array[i][0].split(" ")[3].slice(1)) * Number(array[i][1]);
-      console.log(total);
+  useEffect(() => {
+    async function getOrders() {
+      const response = await axios.get(
+        `http://localhost:3001/orders/${user.sub?.split("|")[1]}`
+      );
+      const data = await response.data.payload;
+
+      const groupBy = (array, key) => {
+        // Return the end result
+        return array.reduce((result, currentValue) => {
+          // If an array already present for key, push it to the array. Else create an array and push the object
+          (result[currentValue[key]] = result[currentValue[key]] || []).push(
+            currentValue
+          );
+          return result;
+        }, {});
+      };
+      const orders_grouped = groupBy(data, "order_id");
+      var newArrayDataOfOjbect = Object.values(orders_grouped);
+      setOrders(newArrayDataOfOjbect);
     }
-    console.log(total);
-    return total;
-  }
+    getOrders();
+  }, [user]);
 
   return (
     <div className="profile-page">
@@ -25,34 +42,41 @@ function ProfilePage({
         <h2>{`Welcome Back, ${user.name.split(" ")[0]}`} </h2>
       )}
       <div className="orders-container">
-        {orders.map((e) => (
-          <>
-            {" "}
-            <div
-              className="order-item"
-              onClick={() => {
-                collapsibleToggle(e);
-              }}
-            >
-              {e.date +
-                ` Order: ${e.id} Total:£${totalCounter(e.order).toLocaleString(
-                  "en-US"
-                )}  `}
-            </div>
-            <div className={e.open ? "open" : "not-open"}>
-              <p>
-                {e.order.map((item) => (
-                  <div>{`${item[0]}  x${item[1]}`}</div>
-                ))}
-              </p>
-            </div>
-          </>
-        ))}
+        <div className="orders-scroll-container">
+          <h3>{"Your Orders:"}</h3>
+          {orders == 0
+            ? "Orders loading:"
+            : orders?.map((e) => (
+                <>
+                  {" "}
+                  <div
+                    className="order-item"
+                    onClick={() => {
+                      collapsibleToggle(e);
+                    }}
+                  >
+                    {`#AMZ${e[0].order_id}  
+                  Total:$${e.reduce((accumulator, object) => {
+                    return (
+                      accumulator +
+                      Number(
+                        object.item_price.replace(/[^0-9.-]+/g, "") *
+                          Number(object.item_amount)
+                      )
+                    );
+                  }, 0)} Date:${e[0].date_time}`}
+                  </div>
+                  <div className={e.open ? "open" : "not-open"}>
+                    {e.map((item) => (
+                      <div className="order-item-line">{`${item.item_type} ${item.item_price} X${item.item_amount}`}</div>
+                    ))}
+                  </div>
+                </>
+              ))}
+        </div>
       </div>
     </div>
   );
 }
-
-//
 
 export default ProfilePage;

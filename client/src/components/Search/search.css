@@ -1,13 +1,13 @@
 .search-container {
   display: grid;
   justify-content: center;
-  align-content: center;
+
   background-color: #efefef;
-  height: 80vh;
+  height: 60vh;
   overflow-y: scroll;
 }
 
-.scroll-cont ainer {
+.scroll-container {
   height: 80vh;
 }
 

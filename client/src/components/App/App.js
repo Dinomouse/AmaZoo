@@ -8,6 +8,7 @@ import Search from "../Search";
 import MyBasket from "../MyBasket";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function App() {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -29,20 +30,26 @@ function App() {
       total += Number(array[i][0].split(" ")[3].slice(1)) * Number(array[i][1]);
       console.log(total);
     }
-    console.log(total);
+
     return total;
   }
 
-  function confirmPurchase() {
-    setOrders([
-      ...orders,
-      {
-        id: Math.floor(Math.random() * 10000),
-        date: new Date().toLocaleString(),
-        order: basketCounter,
-        open: false,
-      },
-    ]);
+  async function confirmPurchase() {
+    let randomOrderNumber = Math.floor(Math.random() * 1000000);
+    for (let i = 0; i < basketCounter.length; i++) {
+      await axios({
+        method: "post",
+        url: `http://localhost:3001/orders`,
+        data: {
+          order_id: randomOrderNumber,
+          user_id: `${user.sub.split("|")[1]}`,
+          date_time: new Date().toLocaleString(),
+          item_type: basketCounter[i][0].split("£")[0],
+          item_price: `${basketCounter[i][0].split("£")[1]}`,
+          item_amount: basketCounter[i][1],
+        },
+      });
+    }
   }
 
   useEffect(() => {
@@ -88,6 +95,7 @@ function App() {
                 collapsibleToggle={collapsibleToggle}
                 isLoading={isLoading}
                 totalCounter={totalCounter}
+                setOrders={setOrders}
               />
             }
           ></Route>
@@ -110,6 +118,7 @@ function App() {
           ></Route>
           <Route path="/Zoo" element={<div>Zoo</div>}></Route>
         </Routes>
+
         <FootBar
           isAuthenticated={isAuthenticated}
           user={user}
