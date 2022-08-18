@@ -96,6 +96,7 @@ function App() {
                 isLoading={isLoading}
                 totalCounter={totalCounter}
                 setOrders={setOrders}
+                myBasket={myBasket}
               />
             }
           ></Route>
