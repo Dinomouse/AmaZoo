@@ -13,7 +13,7 @@ function ProfilePage({
   useEffect(() => {
     async function getOrders() {
       const response = await axios.get(
-        `https://git.heroku.com/amazooo.git/orders/${user.sub?.split("|")[1]}`
+        `http://localhost:3001/orders/${user.sub?.split("|")[1]}`
       );
       const data = await response.data.payload;
 

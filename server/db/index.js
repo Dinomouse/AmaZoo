@@ -1,6 +1,6 @@
 import pg from "pg";
 
-const connectionString = process.env.PGURI;
+const connectionString = process.env.DATBASE_URL;
 
 const pool = new pg.Pool({
   connectionString,

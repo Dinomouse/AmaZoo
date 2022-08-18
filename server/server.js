@@ -3,13 +3,13 @@ import ordersRouter from "./routes/amazooRoutes.js";
 import cors from "cors";
 
 const app = express();
-const PORT = process.env.PORT;
+const port = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/orders", ordersRouter);
 
-app.listen(PORT, () => {
-  console.log(`example app listening on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`example app listening on port ${port}`);
 });
