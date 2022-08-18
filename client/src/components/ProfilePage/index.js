@@ -9,7 +9,6 @@ function ProfilePage({
   collapsibleToggle,
   isLoading,
   setOrders,
-  myBasket,
 }) {
   useEffect(() => {
     async function getOrders() {
@@ -30,10 +29,11 @@ function ProfilePage({
       };
       const orders_grouped = groupBy(data, "order_id");
       var newArrayDataOfOjbect = Object.values(orders_grouped);
+      console.log(newArrayDataOfOjbect);
       setOrders(newArrayDataOfOjbect);
     }
     getOrders();
-  }, [user, myBasket]);
+  }, [user]);
 
   return (
     <div className="profile-page">

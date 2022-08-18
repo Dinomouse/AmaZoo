@@ -50,11 +50,12 @@ function App() {
         },
       });
     }
+    setMyBasket([]);
   }
 
-  useEffect(() => {
-    setMyBasket([]);
-  }, [orders]);
+  // useEffect(() => {
+  //   setMyBasket([]);
+  // }, [orders]);
 
   function collapsibleToggle(e) {
     e.open = !e.open;
