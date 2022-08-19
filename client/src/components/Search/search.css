@@ -8,12 +8,12 @@
 }
 
 .scroll-container {
-  height: 60vh;
+  background-color: transparent;
 }
 
 .animal-container {
   background-color: white;
-  height: 50vh;
+  height: 30vh;
   width: 70vw;
   border-radius: 5px;
   display: flex;
@@ -22,6 +22,7 @@
 
   position: relative;
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .animal-title {
@@ -41,7 +42,7 @@
   width: 50%;
 }
 .elephant {
-  width: 30%;
+  width: 22%;
 }
 
 .animal-button {
@@ -105,13 +106,13 @@
 }
 
 .kangaroo {
-  width: 30%;
+  width: 20%;
 }
 
 .orangutan {
-  width: 30%;
+  width: 22%;
 }
 
 .leopard {
-  width: 30%;
+  width: 22%;
 }
