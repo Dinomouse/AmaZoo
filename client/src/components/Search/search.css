@@ -5,6 +5,7 @@
   background-color: #efefef;
   height: 80vh;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll-container {

@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: white;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .about-scroll-container {
