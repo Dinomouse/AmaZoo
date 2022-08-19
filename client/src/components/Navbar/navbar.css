@@ -13,15 +13,15 @@
 }
 
 .logo {
-  height: 65px;
-  width: 65px;
-  margin-left: 3vw;
+  height: 9vh;
+  width: 9vh;
+  margin-left: 10px;
   display: flex;
   align-items: center;
 }
 
 .title {
-  font-size: 15vw;
+  font-size: 9vh;
   display: flex;
   align-items: center;
   color: #efefef;

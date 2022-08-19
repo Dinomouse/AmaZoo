@@ -6,6 +6,7 @@ import HomePage from "../HomePage";
 import FootBar from "../FootBar";
 import Search from "../Search";
 import MyBasket from "../MyBasket";
+import About from "../About";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -49,13 +50,23 @@ function App() {
           item_amount: basketCounter[i][1],
         },
       });
+      setOrders([
+        ...orders,
+        [
+          {
+            order_id: randomOrderNumber,
+            user_id: `${user.sub.split("|")[1]}`,
+            date_time: new Date().toLocaleString(),
+            item_type: basketCounter[i][0].split("£")[0],
+            item_price: `${basketCounter[i][0].split("£")[1]}`,
+            item_amount: basketCounter[i][1],
+          },
+        ],
+      ]);
     }
+
     setMyBasket([]);
   }
-
-  // useEffect(() => {
-  //   setMyBasket([]);
-  // }, [orders]);
 
   function collapsibleToggle(e) {
     e.open = !e.open;
@@ -84,9 +95,9 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<HomePage isAuthenticated={isAuthenticated}></HomePage>}
+            element={<HomePage isAuthenticated={isAuthenticated} />}
           ></Route>
-          <Route path="/About" element={<div>About</div>}></Route>
+          <Route path="/About" element={<About />}></Route>
           <Route
             path="/Profile"
             element={
@@ -118,7 +129,7 @@ function App() {
             path="/Search"
             element={<Search animalClick={animalClick} />}
           ></Route>
-          <Route path="/Zoo" element={<div>Zoo</div>}></Route>
+          <Route path="/Learn" element={<div>Learn</div>}></Route>
         </Routes>
 
         <FootBar

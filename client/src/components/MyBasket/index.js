@@ -45,7 +45,7 @@ function MyBasket({
       </div>
       <div className="basket-total">
         <h3>
-          {"Basket Total: £" +
+          {"Basket Total: $" +
             totalCounter(basketCounter).toLocaleString("en-US")}
         </h3>
         {basketCounter.length > 0 && (

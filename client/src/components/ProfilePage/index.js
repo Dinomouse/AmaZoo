@@ -5,7 +5,6 @@ import { useEffect } from "react";
 function ProfilePage({
   user,
   orders,
-  totalCounter,
   collapsibleToggle,
   isLoading,
   setOrders,
@@ -47,16 +46,18 @@ function ProfilePage({
           <h3>{"Your Orders:"}</h3>
           {orders == 0
             ? "Orders loading:"
-            : orders?.map((e) => (
+            : orders.map((e) => (
                 <>
                   {" "}
-                  <div
-                    className="order-item"
-                    onClick={() => {
-                      collapsibleToggle(e);
-                    }}
-                  >
-                    {`#AMZ${e[0].order_id}  
+                  <>
+                    <div
+                      className="order-item"
+                      key={e[0].order_id}
+                      onClick={() => {
+                        collapsibleToggle(e);
+                      }}
+                    >
+                      {`#AMZ${e[0].order_id}  
                   Total:$${e.reduce((accumulator, object) => {
                     return (
                       accumulator +
@@ -66,12 +67,16 @@ function ProfilePage({
                       )
                     );
                   }, 0)} Date:${e[0].date_time}`}
-                  </div>
-                  <div className={e.open ? "open" : "not-open"}>
-                    {e.map((item) => (
-                      <div className="order-item-line">{`${item.item_type} ${item.item_price} X${item.item_amount}`}</div>
-                    ))}
-                  </div>
+                    </div>
+                    <div className={e.open ? "open" : "not-open"}>
+                      {e.map((item) => (
+                        <div
+                          key={item.transaction_id}
+                          className="order-item-line"
+                        >{`${item.item_type} ${item.item_price} X${item.item_amount}`}</div>
+                      ))}
+                    </div>
+                  </>
                 </>
               ))}
         </div>

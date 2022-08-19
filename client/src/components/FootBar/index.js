@@ -11,13 +11,13 @@ function FootBar({ isAuthenticated, user, myBasket }) {
     <footer className="foot-bar">
       <div className="nav-buttons-container">
         <Link to="/About" style={{ textDecoration: "none" }}>
-          <button className="button-64">About</button>
+          <button className="about-search-learn">About</button>
         </Link>
         <Link to="/Search" style={{ textDecoration: "none" }}>
-          <button className="button-64">Search</button>
+          <button className="about-search-learn">Search</button>
         </Link>
-        <Link to="/Zoo" style={{ textDecoration: "none" }}>
-          <button className="button-64">Zoo</button>
+        <Link to="/Learn" style={{ textDecoration: "none" }}>
+          <button className="about-search-learn">Learn</button>
         </Link>
       </div>
 
