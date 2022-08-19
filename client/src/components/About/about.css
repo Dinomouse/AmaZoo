@@ -1,13 +1,11 @@
 .about-page-container {
   height: 80vh;
-
   flex-direction: column;
   background-color: white;
   overflow-y: scroll;
 }
 
 .about-scroll-container {
-  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,4 +18,8 @@
 .about-me-container {
   max-width: 90%;
   text-align: center;
+}
+
+.about-page-container img {
+  border-radius: 50%;
 }
