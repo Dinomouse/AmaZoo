@@ -6,6 +6,12 @@
   height: 80vh;
 }
 
+@media screen and (max-width: 600px) {
+  .orders-container {
+    height: 60vh;
+  }
+}
+
 .orders-container {
   height: 65vh;
   width: 80vw;

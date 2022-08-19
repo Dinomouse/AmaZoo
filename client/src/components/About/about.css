@@ -6,6 +6,12 @@
   -webkit-overflow-scrolling: touch;
 }
 
+@media screen and (max-width: 600px) {
+  .about-page-container {
+    height: 75vh;
+  }
+}
+
 .about-scroll-container {
   display: flex;
   flex-direction: column;
