@@ -1,22 +1,21 @@
 .search-page {
-  height: 78vh;
-  flex-direction: column;
-
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.search-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 80vh;
+}
+
+.search-container {
+  overflow-y: auto;
+
+  width: 60vw;
+  height: 75vh;
 }
 
 .animal-container {
   background-color: white;
-
-  height: 30vh;
-  width: 60vw;
+  height: 50vh;
+  width: 100%;
   border-radius: 5px;
   display: flex;
   justify-content: space-evenly;
@@ -39,8 +38,9 @@
 }
 
 .elephant-text {
-  max-width: 50%;
-  font-size: 67%;
+  font-size: 15px;
+
+  width: 50%;
 }
 .elephant {
   width: 25%;
