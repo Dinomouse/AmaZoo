@@ -4,7 +4,7 @@ import "./profileicon.css";
 function ProfileIcon({ user }) {
   return (
     <div className="profile-image-container">
-      <Link to="/Profile">
+      <Link to="/Profile" className="profile-image-container">
         <img className="profile-image" src={user.picture} alt={user.name} />
       </Link>
     </div>

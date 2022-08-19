@@ -3,66 +3,89 @@
   justify-content: center;
 
   background-color: #efefef;
-  height: 60vh;
+  height: 80vh;
   overflow-y: scroll;
 }
 
 .scroll-container {
-  height: 80vh;
+  height: 60vh;
 }
 
 .animal-container {
   background-color: white;
-  height: 18vh;
-  width: 80vw;
+  height: 50vh;
+  width: 70vw;
   border-radius: 5px;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  align-items: center;
+
   position: relative;
   margin-top: 12px;
 }
 
 .animal-title {
-  margin-bottom: -12vw;
-  margin-top: -5vw;
+  margin-top: -10%;
+  margin-bottom: 0;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: -10%;
+}
+
+.elephant-text {
+  font-size: 80%;
+  width: 50%;
+}
+.elephant {
+  width: 30%;
 }
 
 .animal-button {
-  background-color: #039045;
+  background-color: #d87d14;
   width: 33.34%;
   margin-left: 0;
   position: absolute;
   bottom: 0;
   left: 0;
   border-radius: 0px 0px 0px 5px;
-  font-size: 2vh;
+  font-size: 90%;
+  border: none;
+  height: 15%;
+  font-weight: 300;
 }
 
 .animal-button:hover {
   cursor: pointer;
-  background-color: #039045c0;
+  background-color: black;
+  color: white;
 }
 
 .animal-button-mid {
-  background-color: black;
+  background-color: rgb(192, 185, 185);
   width: 33.34%;
   margin-bottom: 0;
   position: absolute;
   bottom: 0;
+  left: 33.3333%;
   border-radius: 0px 0px 0px 0px;
-  font-size: 2vh;
+  font-size: 90%;
   margin-left: 0;
+  border: none;
+  height: 15%;
 }
 
 .animal-button-mid:hover {
   cursor: pointer;
-  background-color: #000000c0;
+  background-color: black;
+  color: white;
 }
 
 .animal-button-end {
-  background-color: #fd8700;
+  background-color: #bd8e0c;
   width: 33.34%;
   margin-bottom: 0;
   margin-left: 0;
@@ -70,34 +93,25 @@
   bottom: 0;
   right: 0;
   border-radius: 0px 0px 5px 0px;
-  font-size: 2vh;
+  font-size: 90%;
+  border: none;
+  height: 15%;
 }
 
 .animal-button-end:hover {
   cursor: pointer;
-  background-color: #fd8700c0;
-}
-
-.elephant {
-  margin-top: 25px;
-  height: 90px;
-  width: 90px;
+  background-color: black;
+  color: white;
 }
 
 .kangaroo {
-  margin-top: 25px;
-  height: 100px;
-  width: 100px;
+  width: 30%;
 }
 
 .orangutan {
-  margin-top: 25px;
-  height: 100px;
-  width: 100px;
+  width: 30%;
 }
 
 .leopard {
-  margin-top: 25px;
-  height: 100px;
-  width: 100px;
+  width: 30%;
 }

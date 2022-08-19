@@ -50,7 +50,10 @@
   border-radius: 5px;
   background-color: #94c20a;
   color: white;
+  text-align: center;
 }
 .about-search-learn:hover {
-  background-color: #039045;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

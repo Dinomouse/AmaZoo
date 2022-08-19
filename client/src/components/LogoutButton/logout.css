@@ -2,8 +2,15 @@
   width: 10vw;
   border-style: none;
   border-radius: 5px;
-  background-color: #94c20a;
+  background-color: rgb(223, 151, 25);
   color: white;
+  height: 5vh;
+}
+
+.logout:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 .login {
@@ -12,4 +19,11 @@
   border-radius: 5px;
   background-color: #94c20a;
   color: white;
+  height: 5vh;
+}
+
+.login:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

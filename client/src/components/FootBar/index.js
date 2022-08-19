@@ -14,7 +14,7 @@ function FootBar({ isAuthenticated, user, myBasket }) {
           <button className="about-search-learn">About</button>
         </Link>
         <Link to="/Search" style={{ textDecoration: "none" }}>
-          <button className="about-search-learn">Search</button>
+          <button className="about-search-learn">Adopt</button>
         </Link>
         <Link to="/Learn" style={{ textDecoration: "none" }}>
           <button className="about-search-learn">Learn</button>

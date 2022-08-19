@@ -1,9 +1,15 @@
-img {
-  height: 47px;
-  width: 47px;
+.profile-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+
+.profile-image {
   border-radius: 50%;
   border: 4px #94c20a solid;
-  margin-top: 3px;
+  height: 70%;
 }
 
 /* h4 {

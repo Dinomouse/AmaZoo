@@ -58,15 +58,17 @@ function ProfilePage({
                       }}
                     >
                       {`#AMZ${e[0].order_id}  
-                  Total:$${e.reduce((accumulator, object) => {
-                    return (
-                      accumulator +
-                      Number(
-                        object.item_price.replace(/[^0-9.-]+/g, "") *
-                          Number(object.item_amount)
-                      )
-                    );
-                  }, 0)} Date:${e[0].date_time}`}
+                   ${e[0].date_time.split(",")[0]} $${e
+                        .reduce((accumulator, object) => {
+                          return (
+                            accumulator +
+                            Number(
+                              object.item_price.replace(/[^0-9.-]+/g, "") *
+                                Number(object.item_amount)
+                            )
+                          );
+                        }, 0)
+                        .toLocaleString("en-US")}`}
                     </div>
                     <div className={e.open ? "open" : "not-open"}>
                       {e.map((item) => (
