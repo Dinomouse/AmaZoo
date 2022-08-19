@@ -6,8 +6,8 @@ import leopard from "../../images/leopard.svg";
 
 function Search({ animalClick }) {
   return (
-    <div className="search-container">
-      <div className="scroll-container">
+    <div className="search-page">
+      <div className="search-container">
         <div className="animal-container elephant-card">
           <h3 className="animal-title">Elephant</h3>
           <div className="image-text">

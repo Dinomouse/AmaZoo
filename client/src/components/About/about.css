@@ -2,7 +2,7 @@
   height: 80vh;
   flex-direction: column;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
