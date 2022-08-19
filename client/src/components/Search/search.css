@@ -8,13 +8,13 @@
 .search-container {
   overflow-y: auto;
   background-color: orange;
-  width: 60vw;
+  width: 70vw;
   height: 75vh;
 }
 
 @media screen and (max-width: 600px) {
   .search-container {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
