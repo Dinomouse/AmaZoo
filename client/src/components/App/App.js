@@ -38,6 +38,7 @@ function App() {
   async function confirmPurchase() {
     let randomOrderNumber = Math.floor(Math.random() * 1000000);
     let emptyArray = [];
+
     for (let i = 0; i < basketCounter.length; i++) {
       await axios({
         method: "post",
@@ -56,7 +57,7 @@ function App() {
         user_id: `${user.sub.split("|")[1]}`,
         date_time: new Date().toLocaleString(),
         item_type: basketCounter[i][0].split("£")[0],
-        item_price: `${basketCounter[i][0].split("£")[1]}`,
+        item_price: `$${basketCounter[i][0].split("£")[1]}`,
         item_amount: basketCounter[i][1],
       });
     }
