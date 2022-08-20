@@ -7,6 +7,7 @@ import FootBar from "../FootBar";
 import Search from "../Search";
 import MyBasket from "../MyBasket";
 import About from "../About";
+import Learn from "../Learn";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -126,7 +127,7 @@ function App() {
             path="/Search"
             element={<Search animalClick={animalClick} />}
           ></Route>
-          <Route path="/Learn" element={<div>Learn</div>}></Route>
+          <Route path="/Learn" element={<Learn />}></Route>
         </Routes>
 
         <FootBar
