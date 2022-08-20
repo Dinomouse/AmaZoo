@@ -14,7 +14,7 @@ function MyBasket({
     let counter = {};
 
     myBasket.forEach(function (obj) {
-      var key = `${obj.animal + " " + obj.length + " £" + obj.price}`;
+      var key = `${obj.animal + " " + obj.length + " $" + obj.price}`;
       counter[key] = (counter[key] || 0) + 1;
     });
 
