@@ -47,8 +47,8 @@ function App() {
           order_id: randomOrderNumber,
           user_id: `${user.sub.split("|")[1]}`,
           date_time: new Date().toLocaleString(),
-          item_type: basketCounter[i][0].split("£")[0],
-          item_price: `${basketCounter[i][0].split("£")[1]}`,
+          item_type: basketCounter[i][0].split("$")[0],
+          item_price: `${basketCounter[i][0].split("$")[1]}`,
           item_amount: basketCounter[i][1],
         },
       });
@@ -56,8 +56,8 @@ function App() {
         order_id: randomOrderNumber,
         user_id: `${user.sub.split("|")[1]}`,
         date_time: new Date().toLocaleString(),
-        item_type: basketCounter[i][0].split("£")[0],
-        item_price: `$${basketCounter[i][0].split("£")[1]}`,
+        item_type: basketCounter[i][0].split("$")[0],
+        item_price: `$${basketCounter[i][0].split("$")[1]}`,
         item_amount: basketCounter[i][1],
       });
     }
