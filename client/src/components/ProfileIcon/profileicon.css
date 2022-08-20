@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100%;
   width: 20%;
 }
@@ -9,7 +10,7 @@
 .profile-image {
   border-radius: 50%;
   border: 4px #94c20a solid;
-  height: 70%;
+  height: 55%;
 }
 
 /* h4 {

@@ -12,35 +12,30 @@
   height: 75vh;
 }
 
-@media screen and (max-width: 600px) {
-  .search-container {
-    height: 70vh;
-  }
-}
-
 .animal-container {
   background-color: white;
   height: 40vh;
   width: 100%;
   border-radius: 5px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column;
   position: relative;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 
 .animal-title {
-  margin-top: -10%;
-  margin-bottom: 0;
+  margin-top: 0;
+  background-color: #94c20a;
+  border-radius: 5px 5px 0px 0px;
+  font-size: 2.5vw;
+  color: white;
 }
 
 .image-text {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: -10%;
-  height: 50%;
 }
 
 .elephant-text {
@@ -49,7 +44,7 @@
   width: 50%;
 }
 .elephant {
-  width: 25%;
+  width: 20%;
 }
 
 .animal-button {
@@ -63,7 +58,7 @@
   font-size: 90%;
   border: none;
   height: 15%;
-  font-weight: 300;
+  font-size: 2vw;
 }
 
 .animal-button:hover {
@@ -84,6 +79,7 @@
   margin-left: 0;
   border: none;
   height: 15%;
+  font-size: 2vw;
 }
 
 .animal-button-mid:hover {
@@ -104,6 +100,7 @@
   font-size: 90%;
   border: none;
   height: 15%;
+  font-size: 2vw;
 }
 
 .animal-button-end:hover {
@@ -113,13 +110,45 @@
 }
 
 .kangaroo {
-  width: 25%;
+  width: 20%;
 }
 
 .orangutan {
-  width: 25%;
+  width: 20%;
 }
 
 .leopard {
-  width: 25%;
+  width: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    height: 70vh;
+  }
+
+  .animal-container {
+    height: 20vh;
+  }
+
+  .animal-title {
+    font-size: 3vw;
+  }
+  .elephant-text {
+    font-size: 2.6vw;
+  }
+
+  .elephant {
+    width: 30%;
+  }
+  .kangaroo {
+    width: 30%;
+  }
+
+  .orangutan {
+    width: 30%;
+  }
+
+  .leopard {
+    width: 30%;
+  }
 }
