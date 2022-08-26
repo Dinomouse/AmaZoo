@@ -1,0 +1,67 @@
+.Learn-Page-Container {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+}
+
+select {
+  width: 20%;
+  height: 5vw;
+  text-align: center;
+  font-size: 3vw;
+  border-radius: 5px;
+}
+
+.learn-container {
+  background-color: #94c20a;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow-y: auto;
+  font-size: 2vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.learn-scroll-container {
+  width: 60%;
+  overflow-y: auto;
+  height: 70%;
+}
+
+.learn-span {
+  background-color: rgb(255, 0, 0);
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.6vh;
+  height: 100%;
+  word-wrap: break-word;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .learn-container {
+    font-size: 3.3vw;
+  }
+  .learn-scroll-container {
+    width: 80%;
+  }
+
+  .learn-span {
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: 2vw;
+  }
+}

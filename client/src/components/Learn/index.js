@@ -4,7 +4,7 @@ import Axios from "axios";
 
 export default function Learn() {
   const [animals, setAnimals] = useState([]);
-  const [chosenAnimal, setChosenAnimal] = useState("");
+  const [chosenAnimal, setChosenAnimal] = useState("Lion");
   console.log(process.env.REACT_APP_ANIMALKEY);
   useEffect(() => {
     async function getAnimals() {
@@ -28,23 +28,33 @@ export default function Learn() {
   }
 
   return (
-    <>
-      <div>Learn</div>
+    <div className="Learn-Page-Container">
       <select name="animals" id="animals" onChange={handleAnimals}>
         <option value="lion">Lion</option>
         <option value="cheetah">Cheetah</option>
         <option value="elephant">Elephant</option>
-        <option value="orangutan">Orangutan</option>
-        <option value="snake">Snake</option>
+        <option value="kangaroo">Kangaroo</option>
+
         <option value="monkey">Monkey</option>
       </select>
-      {animals.map((e) => (
-        <div>
-          {e.characteristics.biggest_threat === undefined
-            ? e.name + "_____No threat"
-            : e.name + "_____" + e.characteristics.biggest_threat}
-        </div>
-      ))}
-    </>
+      <div className="learn-scroll-container">
+        {animals.map((e) => (
+          <div className="learn-container">
+            {e.characteristics.biggest_threat === undefined ? (
+              <div className="learn-item">
+                {e.name} <span className="learn-span">No threat</span>
+              </div>
+            ) : (
+              <div className="learn-item">
+                {e.name}{" "}
+                <span className="learn-span">
+                  {e.characteristics.biggest_threat}
+                </span>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
