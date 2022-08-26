@@ -21,7 +21,7 @@ select {
   width: 100%;
   margin-bottom: 10px;
   position: relative;
-  overflow-y: auto;
+
   font-size: 2vw;
   height: 10vh;
   display: flex;
@@ -31,8 +31,9 @@ select {
 
 .learn-scroll-container {
   width: 60%;
-  overflow-y: auto;
+
   height: 70%;
+  overflow-y: auto;
 }
 
 .learn-span {
@@ -53,15 +54,23 @@ select {
 
 @media screen and (max-width: 600px) {
   .learn-container {
-    font-size: 3.3vw;
+    font-size: 3.6vw;
   }
   .learn-scroll-container {
     width: 80%;
+    height: 60vh;
+    margin-bottom: 30px;
   }
 
   .learn-span {
     padding-left: 2px;
     padding-right: 2px;
     font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .orders-container {
+    height: 65vh;
   }
 }
