@@ -56,7 +56,8 @@ function MyBasket({
               </button>
             </Link>
             <button className="empty-basket" onClick={clearBasket}>
-              Clear Basket
+              Clear
+              <br /> Basket
             </button>
           </>
         )}
