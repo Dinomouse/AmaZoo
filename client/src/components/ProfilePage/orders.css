@@ -6,12 +6,6 @@
   height: 80vh;
 }
 
-@media screen and (max-width: 600px) {
-  .orders-container {
-    height: 40vh;
-  }
-}
-
 .orders-container {
   height: 65vh;
   width: 80vw;
@@ -20,6 +14,12 @@
 
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .orders-container {
+    height: 65vh;
+  }
 }
 
 .orders-scroll-container {

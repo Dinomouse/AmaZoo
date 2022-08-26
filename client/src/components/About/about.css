@@ -1,14 +1,14 @@
 .about-page-container {
   height: 80vh;
   flex-direction: column;
-  background-color: white;
+
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-width: 600px) {
   .about-page-container {
-    height: 75vh;
+    height: 70vh;
   }
 }
 
